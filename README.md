@@ -6,12 +6,12 @@ _Automate IOS-XR Zero Touch Provisioning using Cisco NSO_
 
 This lab comes with Jupyter lab  notebooks for showcasing a full working zero touch provisioning example for ios-xr devices. Goal is to be able to run the following call-flow:
 
-<img src="jupyter/img/ztp_1.png" width="800"/>
+<img src="jupyter/img/ztp_cf.png" width="800"/>
 
 ## Installation
 The lab has a corresponding [dcloud](https://dcloud.cisco.com)  where everything is installed and pre-configured. A simulated xrv9k device is used, configured and deployed inside a VIRL simulation which is also included in the dcloud environment.  
 
-<img src="jupyter/img/ztp_topo.png" width="800"/>
+<img src="jupyter/img/ztp_topo_cl.png" width="800"/>
 
 ### Dependencies
 
