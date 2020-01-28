@@ -16,15 +16,15 @@ from _ncs import dp
 class GetDay0(Action):
     @Action.action
     def cb_action(self, uinfo, name, kp, input, output, trans):
-	
-	device_serial = kp[0][0].as_pyval()
+    
+        device_serial = kp[0][0].as_pyval()
 
         with maapi.single_write_trans(uinfo.username, "system", db=ncs.RUNNING) as th:
             root = maagic.get_root(th)
             ztp = root.ztp[device_serial]
-	    filename = ztp.day0
-	    ip = ztp.ip
-	    hostname = ztp.hostname
+        filename = ztp.day0
+        ip = ztp.ip
+        hostname = ztp.hostname
         
         f = open("/opt/ncs-run/packages/ztp/day0_templates/{}".format(filename), "r")
         day0 = f.read()
@@ -60,8 +60,8 @@ class Onboard(Action):
             self.log.info(root.devices.device[device_serial].ssh.fetch_host_keys(inputs))
             self.log.info(root.devices.device[device_serial].sync_from())
 
-	#send notif
- 	csocket = socket.socket()
+        #send notif
+        csocket = socket.socket()
         try:
             ctx = dp.init_daemon('send-notif')
             # making a control socket
@@ -71,7 +71,7 @@ class Onboard(Action):
             # notif_name_hash = _ncs.str2hash('service-name')
             notif_state_hash = _ncs.str2hash('state')
             notif_device_hash = _ncs.str2hash('device')
-	    notif_hash = _ncs.str2hash('ztp-status')
+        notif_hash = _ncs.str2hash('ztp-status')
             
             # making the notification
             message = []

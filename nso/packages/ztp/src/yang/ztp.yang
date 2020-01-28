@@ -25,8 +25,8 @@ module ztp {
 
     key serial;
     leaf serial {
-      tailf:cli-allow-range;
-      type string;
+        tailf:cli-allow-range;
+        type string;
     }
 
     leaf hostname {
@@ -40,10 +40,10 @@ module ztp {
 
     leaf ip{
         type inet:ipv4-address;
-	mandatory true;
+        mandatory true;
     }
 
-    description "This is an RFS skeleton service";
+    description "ZTP NSO service";
 
       tailf:action get_day0 {
         tailf:actionpoint get_day0-actionpoint;
@@ -67,11 +67,7 @@ module ztp {
           }
         }
       }
-
-
-
   }
-  
   
   notification ztp-status {
       leaf state {
