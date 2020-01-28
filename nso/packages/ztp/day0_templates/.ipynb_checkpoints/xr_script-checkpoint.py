@@ -2,6 +2,7 @@
 
 import sys
 import tempfile
+import subprocess
 sys.path.append("/pkg/bin/")
 from ztp_helper import ZtpHelpers
 
