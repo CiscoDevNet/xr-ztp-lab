@@ -28,7 +28,7 @@ The connection details between the different components of the lab are preconfig
 
 ## Usage
 
-Access the lab at http://198.18.134.50:8888
+Access the lab at http://198.18.134.50:8888. Enter "cisco" for password.
 
 Start with the [`ztp_lab`](./jupyter/ztp_lab.ipynb) notebook.
 To run a section of the lab, select the cell and press `Shift+Enter`.
